@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+  <defs>
+    <style>
+      .t { fill: none; stroke: rgba(255,255,255,0.045); stroke-width: 1; stroke-linecap: square; }
+      .c { fill: rgba(255,255,255,0.045); }
+      .chip { fill: none; stroke: rgba(255,255,255,0.045); stroke-width: 1; }
+    </style>
+  </defs>
+  <line class="t" x1="0" y1="60" x2="120" y2="60"/>
+  <line class="t" x1="160" y1="60" x2="260" y2="60"/>
+  <line class="t" x1="300" y1="60" x2="400" y2="60"/>
+  <line class="t" x1="0" y1="150" x2="80" y2="150"/>
+  <line class="t" x1="140" y1="150" x2="220" y2="150"/>
+  <line class="t" x1="280" y1="150" x2="400" y2="150"/>
+  <line class="t" x1="0" y1="240" x2="100" y2="240"/>
+  <line class="t" x1="160" y1="240" x2="310" y2="240"/>
+  <line class="t" x1="350" y1="240" x2="400" y2="240"/>
+  <line class="t" x1="0" y1="330" x2="70" y2="330"/>
+  <line class="t" x1="130" y1="330" x2="250" y2="330"/>
+  <line class="t" x1="290" y1="330" x2="400" y2="330"/>
+  <line class="t" x1="80" y1="0" x2="80" y2="110"/>
+  <line class="t" x1="80" y1="150" x2="80" y2="240"/>
+  <line class="t" x1="80" y1="280" x2="80" y2="400"/>
+  <line class="t" x1="200" y1="0" x2="200" y2="60"/>
+  <line class="t" x1="200" y1="100" x2="200" y2="200"/>
+  <line class="t" x1="200" y1="240" x2="200" y2="400"/>
+  <line class="t" x1="320" y1="0" x2="320" y2="150"/>
+  <line class="t" x1="320" y1="190" x2="320" y2="330"/>
+  <line class="t" x1="320" y1="370" x2="320" y2="400"/>
+  <line class="t" x1="140" y1="60" x2="140" y2="150"/>
+  <line class="t" x1="260" y1="60" x2="260" y2="240"/>
+  <line class="t" x1="130" y1="330" x2="130" y2="240"/>
+  <line class="t" x1="350" y1="240" x2="350" y2="330"/>
+  <polyline class="t" points="80,110 120,110 120,60"/>
+  <polyline class="t" points="80,280 140,280 140,240"/>
+  <polyline class="t" points="290,330 290,370 320,370"/>
+  <circle class="c" cx="80" cy="60" r="2.5"/>
+  <circle class="c" cx="80" cy="150" r="2.5"/>
+  <circle class="c" cx="80" cy="240" r="2.5"/>
+  <circle class="c" cx="200" cy="60" r="2.5"/>
+  <circle class="c" cx="200" cy="150" r="2.5"/>
+  <circle class="c" cx="200" cy="240" r="2.5"/>
+  <circle class="c" cx="260" cy="60" r="2.5"/>
+  <circle class="c" cx="140" cy="150" r="2.5"/>
+  <circle class="c" cx="350" cy="240" r="2.5"/>
+  <circle class="c" cx="130" cy="330" r="2.5"/>
+  <circle class="c" cx="320" cy="150" r="2.5"/>
+  <circle class="c" cx="320" cy="330" r="2.5"/>
+  <rect class="chip" x="108" y="54" width="16" height="12" rx="1"/>
+  <rect class="chip" x="222" y="144" width="16" height="12" rx="1"/>
+  <rect class="chip" x="56" y="234" width="16" height="12" rx="1"/>
+  <rect class="chip" x="164" y="324" width="16" height="12" rx="1"/>
+  <rect class="chip" x="296" y="144" width="16" height="12" rx="1"/>
+  <line class="t" x1="190" y1="115" x2="210" y2="115"/>
+  <line class="t" x1="190" y1="121" x2="210" y2="121"/>
+  <line class="t" x1="75" y1="185" x2="85" y2="185"/>
+  <line class="t" x1="75" y1="191" x2="85" y2="191"/>
+  <line class="t" x1="315" y1="275" x2="325" y2="275"/>
+  <line class="t" x1="315" y1="281" x2="325" y2="281"/>
+  <rect class="chip" x="22" y="30" width="36" height="24" rx="2"/>
+  <line class="t" x1="28" y1="30" x2="28" y2="24"/>
+  <line class="t" x1="36" y1="30" x2="36" y2="24"/>
+  <line class="t" x1="44" y1="30" x2="44" y2="24"/>
+  <line class="t" x1="28" y1="54" x2="28" y2="60"/>
+  <line class="t" x1="36" y1="54" x2="36" y2="60"/>
+  <line class="t" x1="44" y1="54" x2="44" y2="60"/>
+  <rect class="chip" x="336" y="168" width="36" height="24" rx="2"/>
+  <line class="t" x1="342" y1="168" x2="342" y2="162"/>
+  <line class="t" x1="350" y1="168" x2="350" y2="162"/>
+  <line class="t" x1="358" y1="168" x2="358" y2="162"/>
+  <line class="t" x1="342" y1="192" x2="342" y2="198"/>
+  <line class="t" x1="350" y1="192" x2="350" y2="198"/>
+  <line class="t" x1="358" y1="192" x2="358" y2="198"/>
+  <path class="chip" d="M 22 302 L 22 320 L 36 326 L 36 296 Z"/>
+  <line class="t" x1="22" y1="306" x2="12" y2="306"/>
+  <line class="t" x1="22" y1="311" x2="12" y2="311"/>
+  <line class="t" x1="22" y1="316" x2="12" y2="316"/>
+  <circle class="chip" cx="160" cy="60" r="3"/>
+  <circle class="chip" cx="260" cy="240" r="3"/>
+  <circle class="chip" cx="350" cy="330" r="3"/>
+  <circle class="chip" cx="120" cy="150" r="3"/>
+  <circle class="chip" cx="310" cy="240" r="3"/>
+  <line class="t" x1="0" y1="100" x2="40" y2="100"/>
+  <line class="t" x1="360" y1="100" x2="400" y2="100"/>
+  <line class="t" x1="0" y1="290" x2="40" y2="290"/>
+  <line class="t" x1="170" y1="310" x2="200" y2="310"/>
+  <line class="t" x1="240" y1="290" x2="260" y2="290"/>
+</svg>
