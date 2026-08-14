@@ -1,7 +1,9 @@
 import os
 import time
 import html
-import requests
+import json
+from urllib import request as urllib_request
+from urllib.error import URLError, HTTPError
 from flask import Flask, request, jsonify, send_from_directory
 
 app = Flask(__name__, static_folder='.', static_url_path='')
@@ -60,9 +62,16 @@ def send_telegram(text: str) -> bool:
         'parse_mode': 'HTML',
     }
     try:
-        resp = requests.post(url, json=payload, timeout=10)
-        return resp.ok
-    except requests.RequestException:
+        body = json.dumps(payload).encode('utf-8')
+        req = urllib_request.Request(
+            url,
+            data=body,
+            headers={'Content-Type': 'application/json; charset=utf-8'},
+            method='POST',
+        )
+        with urllib_request.urlopen(req, timeout=10) as resp:
+            return 200 <= getattr(resp, 'status', 200) < 300
+    except (URLError, HTTPError, OSError):
         return False
 
 # ── API ──────────────────────────────────────────────────────────────────────
