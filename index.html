@@ -604,13 +604,17 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 52px
 .new-section--objects .sh-desc{transform:translateX(5mm);}
 .new-cards-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);margin-top:32px;}
 .new-card{background:var(--bg);padding:28px 32px;position:relative;overflow:hidden;transition:background .3s;display:flex;flex-direction:column;}
+.new-card[style*="--card-image"]{background:var(--bg);}
+.new-card[style*="--card-image"]::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,26,12,.02),rgba(10,26,12,.08)),var(--card-image) center/cover no-repeat;opacity:.82;transition:opacity .35s;z-index:0;}
+.new-card[style*="--card-image"]:hover::after{opacity:.9;}
+.new-card[style*="--card-image"] > *{position:relative;z-index:1;}
 .new-card:hover{background:var(--bg3);}
 .new-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:transparent;transition:background .3s;}
 .new-card:hover::before{background:var(--green);}
 .new-card-num{font-size:10px;color:var(--text-dim);letter-spacing:3px;font-weight:600;margin-bottom:20px;}
-.new-card-icon{color:var(--neon);margin-bottom:18px;}
+.new-card-icon{color:var(--neon);margin-bottom:18px;background:rgba(10,26,12,.76);border:1px solid var(--border2);width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);}
 .new-card-title{font-size:17px;font-weight:800;color:var(--text);line-height:1.25;margin-bottom:12px;}
-.new-card-desc{font-size:13px;color:var(--text-mid);line-height:1.75;margin-bottom:28px;flex:1;}
+.new-card-desc{font-size:13px;color:rgba(232,245,234,.92);line-height:1.75;margin-bottom:28px;flex:1;text-shadow:0 2px 8px rgba(0,0,0,.8);}
 .new-card-link{font-size:10px;color:var(--neon);letter-spacing:2px;text-transform:uppercase;font-weight:700;background:none;border:none;font-family:'Montserrat',sans-serif;padding:0;cursor:pointer;display:inline-flex;align-items:center;gap:6px;transition:gap .2s;width:fit-content;}
 .new-card:hover .new-card-link{gap:12px;}
 @media(max-width:768px){.new-section--comfort .solutions-header--split{display:flex;flex-direction:column;align-items:flex-start;gap:16px;}.new-cards-grid{grid-template-columns:1fr;}.new-card{padding:22px 18px;}}
@@ -1008,28 +1012,28 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 52px
   </div>
   <div class="new-cards-grid reveal">
 
-    <div class="new-card">
+    <div class="new-card" style="--card-image:url('/assets/images/card-comfort-turnkey.svg')">
       <div class="new-card-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg></div>
       <h3 class="new-card-title">Умный дом «под ключ»</h3>
       <p class="new-card-desc">Полная интеграция освещения, климата, безопасности и энергии в единое управление. Работает локально — без облака, надёжно 24/7.</p>
       <button class="new-card-link" onclick="openSolModal('turnkey')">Подробнее →</button>
     </div>
 
-    <div class="new-card">
+    <div class="new-card" style="--card-image:url('/assets/images/card-comfort-scenes.svg')">
       <div class="new-card-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
       <h3 class="new-card-title">Сценарии управления</h3>
       <p class="new-card-desc">Одна кнопка меняет атмосферу всего дома. «Дом», «Ночь», «Отпуск», «Кино» — сценарии адаптируются под ваш распорядок автоматически.</p>
       <button class="new-card-link" onclick="openSolModal('scenarios')">Узнать подробнее →</button>
     </div>
 
-    <div class="new-card">
+    <div class="new-card" style="--card-image:url('/assets/images/card-comfort-app.svg')">
       <div class="new-card-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></div>
       <h3 class="new-card-title">Управление через приложение</h3>
       <p class="new-card-desc">Полный контроль с iPhone, Android или планшета из любой точки мира. Интеграция с Alexa, Google Home, Apple HomeKit.</p>
       <button class="new-card-link" onclick="openSolModal('app')">Узнать подробнее →</button>
     </div>
 
-    <div class="new-card">
+    <div class="new-card" style="--card-image:url('/assets/images/card-comfort-automation.svg')">
       <div class="new-card-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
       <h3 class="new-card-title">Автоматизация повседневных процессов</h3>
       <p class="new-card-desc">Система знает ваш распорядок. Утреннее пробуждение, проветривание, подготовка дома к возвращению — всё происходит само, без команд.</p>
