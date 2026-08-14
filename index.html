@@ -4,6 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Logic Smart House — интеллектуальная экосистема управления на базе Loxone. Для частных домов, отелей, коммерческих зданий.">
+<meta name="keywords" content="умный дом, Loxone, автоматизация дома, smart home, Logic Smart House, интеллектуальное управление">
+<meta property="og:title" content="LOGIC SMART HOUSE — Интеллектуальная экосистема для вашего дома">
+<meta property="og:description" content="Интеллектуальная экосистема управления умным домом на базе Loxone. Управление климатом, освещением, безопасностью и энергопотреблением.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="LOGIC SMART HOUSE — Интеллектуальная экосистема для вашего дома">
+<meta name="twitter:description" content="Интеллектуальная экосистема управления умным домом на базе Loxone.">
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="build-version" content="2026-08-14-02">
 <title>LOGIC SMART HOUSE — Интеллектуальная экосистема для вашего дома</title>
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -233,14 +245,18 @@ nav.scrolled{height:70px;}
 .solutions .section-eyebrow{display:none;}
 .solutions-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);}
 .solution-card{background:var(--bg2);padding:20px 28px;position:relative;overflow:hidden;cursor:default;transition:background .3s;}
+.solution-card[style*="--sol-image"]{background:var(--bg2);}
+.solution-card[style*="--sol-image"]::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,26,12,.06),rgba(10,26,12,.22)),var(--sol-image) center/cover no-repeat;opacity:.42;transition:opacity .35s;z-index:0;}
+.solution-card[style*="--sol-image"]:hover::after{opacity:.52;}
+.solution-card[style*="--sol-image"] > *{position:relative;z-index:1;}
 .solution-card:hover{background:var(--bg3);}
 .solution-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:transparent;transition:all .3s;}
 .solution-card:hover::before{background:var(--green);}
 .solution-num{font-size:10px;color:var(--text-dim);letter-spacing:3px;margin-bottom:10px;font-weight:600;}
-.solution-icon{margin-bottom:6px;color:var(--neon);}
+.solution-icon{margin-bottom:6px;color:var(--neon);background:rgba(10,26,12,.76);border:1px solid var(--border2);width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);}
 .solution-icon svg{width:22px;height:22px;}
 .solution-card h3{font-size:17px;font-weight:800;color:var(--text);margin-bottom:6px;}
-.solution-card p{font-size:13px;color:var(--text-mid);line-height:1.6;margin-bottom:12px;}
+.solution-card p{font-size:13px;color:rgba(232,245,234,.92);line-height:1.6;margin-bottom:12px;text-shadow:0 2px 8px rgba(0,0,0,.8);}
 .solution-link{font-size:10px;color:var(--neon);letter-spacing:2px;text-transform:uppercase;display:flex;align-items:center;gap:8px;font-weight:700;transition:gap .2s;cursor:pointer;background:none;border:none;font-family:'Montserrat',sans-serif;padding:0;}
 .solution-card:hover .solution-link{gap:14px;}
 
@@ -737,7 +753,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 52px
 <!-- NAV -->
 <nav id="navbar">
   <a class="nav-logo-wrap" href="#" style="text-decoration:none;">
-    <img class="nav-logo-img" id="navLogo" src="" alt="Logic Smart House">
+    <img loading="lazy" class="nav-logo-img" id="navLogo" src="" alt="Logic Smart House">
     <div class="nav-logo-text">LOGIC <span>SMART</span> HOUSE<small style="color:rgba(232,245,234,.72)">Лоджик Смарт Хаус</small></div>
   </a>
   <div class="nav-links">
@@ -787,7 +803,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 52px
   </div>
   <div class="nav-right">
     <span class="nav-phone">+7 988 957-60-43</span>
-    <button class="nav-cta" onclick="openModal()">Заявка</button>
+    <button class="nav-cta" onclick="openModal()" aria-label="Получить консультацию">Заявка</button>
   </div>
   <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Открыть меню" aria-expanded="false">
     <span></span><span></span><span></span>
@@ -848,7 +864,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 52px
         </div>
         <!-- Center: full image -->
         <div style="flex:1;line-height:0;overflow:hidden;">
-          <img src="/assets/smart-house-hero.png" alt="Logic Smart House" style="width:100%;height:auto;display:block;outline:1.2mm solid #1c1f1d;outline-offset:-1.2mm;" />
+          <img loading="lazy" src="/assets/smart-house-hero.png" alt="Logic Smart House" style="width:100%;height:auto;display:block;outline:1.2mm solid #1c1f1d;outline-offset:-1.2mm;" />
         </div>
         <!-- Right column -->
         <div style="width:128px;flex-shrink:0;display:flex;flex-direction:column;border-left:1px solid rgba(45,138,69,.2);background:rgba(19,36,21,.7);backdrop-filter:blur(8px);">
@@ -1306,7 +1322,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 52px
   <div class="footer-top">
     <div class="footer-brand">
       <div class="footer-logo-wrap">
-        <img class="footer-logo-img" id="footerLogo" src="" alt="Logic Smart House">
+        <img loading="lazy" class="footer-logo-img" id="footerLogo" src="" alt="Logic Smart House">
         <div class="footer-logo-text">LOGIC <span>SMART</span> HOUSE<small style="display:block;font-size:9px;font-weight:500;letter-spacing:3px;color:rgba(232,245,234,.72);margin-top:1px;">Лоджик Смарт Хаус</small></div>
       </div>
       <p>Интеллектуальная экосистема для вашего дома — от частного коттеджа до коммерческого здания. Официальный партнёр Loxone.</p>
@@ -1334,6 +1350,41 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 52px
 // Logo — direct path
 document.getElementById('navLogo').src = '/assets/logo.png';
 document.getElementById('footerLogo').src = '/assets/logo.png';
+
+// Version image-backed cards so the browser does not reuse stale backgrounds.
+(function bustVisualCache(){
+  const version = '20260814';
+  document.querySelectorAll('.feature-item, .solution-card').forEach((el) => {
+    ['--feature-image', '--sol-image'].forEach((prop) => {
+      const raw = el.style.getPropertyValue(prop).trim();
+      if (!raw) return;
+      const next = raw.replace(/url\((['"]?)(.*?)\1\)/, (_, __, url) => {
+        const hasQuery = url.includes('?');
+        return `url("${url}${hasQuery ? '&' : '?'}v=${version}")`;
+      });
+      el.style.setProperty(prop, next);
+    });
+  });
+})();
+
+// Auto-refresh the visible page when the HTML build version changes.
+(function watchBuildVersion(){
+  const current = document.querySelector('meta[name="build-version"]')?.content || '';
+  const url = location.href.split('#')[0].split('?')[0];
+  let busy = false;
+  setInterval(async () => {
+    if (busy) return;
+    busy = true;
+    try {
+      const res = await fetch(url + '?v=' + Date.now(), { cache: 'no-store' });
+      const html = await res.text();
+      const match = html.match(/<meta name="build-version" content="([^"]+)"/i);
+      const next = match ? match[1] : '';
+      if (next && next !== current) location.reload();
+    } catch (_) {}
+    busy = false;
+  }, 2000);
+})();
 
 // Cursor (only on pointer devices, not touch)
 if(window.matchMedia('(pointer:fine)').matches){
@@ -1563,9 +1614,9 @@ function openCookiePolicyFromBanner(e){
 <!-- SOLUTION MODAL: Частный дом -->
 <div class="sol-modal-overlay" id="solModalOverlayprivate">
   <div class="sol-modal" id="solModalPrivate">
-    <button class="sol-modal-close" onclick="closeSolModal()">✕</button>
+    <button class="sol-modal-close" onclick="closeSolModal()" aria-label="Закрыть">✕</button>
     <div style="position:relative;overflow:hidden;border-radius:16px 16px 0 0;margin:-1px -1px 0 -1px;">
-      <img src="assets/images/private-house.png" alt="Частный дом — умная автоматизация LOGIC SMART HOUSE" style="width:100%;height:280px;object-fit:cover;object-position:center;display:block;border-radius:16px 16px 0 0;">
+      <img loading="lazy" src="assets/images/private-house.png" alt="Частный дом — умная автоматизация LOGIC SMART HOUSE" style="width:100%;height:280px;object-fit:cover;object-position:center;display:block;border-radius:16px 16px 0 0;">
       <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(10,26,12,.7) 100%);border-radius:16px 16px 0 0;"></div>
     </div>
     <div class="sol-modal-body">
@@ -1636,9 +1687,9 @@ function openCookiePolicyFromBanner(e){
 <!-- SOLUTION MODAL: Умный дом «под ключ» -->
 <div class="sol-modal-overlay" id="solModalOverlayturnkey">
   <div class="sol-modal" id="solModalTurnkey">
-    <button class="sol-modal-close" onclick="closeSolModal()">✕</button>
+    <button class="sol-modal-close" onclick="closeSolModal()" aria-label="Закрыть">✕</button>
     <div style="position:relative;overflow:hidden;border-radius:16px 16px 0 0;margin:-1px -1px 0 -1px;">
-      <img src="assets/images/miniserver-hub.png" alt="Умный дом под ключ — экосистема LOGIC SMART HOUSE" style="width:100%;height:280px;object-fit:cover;object-position:center;display:block;border-radius:16px 16px 0 0;">
+      <img loading="lazy" src="assets/images/miniserver-hub.png" alt="Умный дом под ключ — экосистема LOGIC SMART HOUSE" style="width:100%;height:280px;object-fit:cover;object-position:center;display:block;border-radius:16px 16px 0 0;">
       <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(10,26,12,.7) 100%);border-radius:16px 16px 0 0;"></div>
     </div>
     <div class="sol-modal-body">
@@ -1718,9 +1769,9 @@ function openCookiePolicyFromBanner(e){
 <!-- SOLUTION MODAL: Сценарии управления -->
 <div class="sol-modal-overlay" id="solModalOverlayscenarios">
   <div class="sol-modal" id="solModalScenarios">
-    <button class="sol-modal-close" onclick="closeSolModal()">✕</button>
+    <button class="sol-modal-close" onclick="closeSolModal()" aria-label="Закрыть">✕</button>
     <div style="position:relative;overflow:hidden;border-radius:16px 16px 0 0;margin:-1px -1px 0 -1px;">
-      <img src="assets/images/scenarios-tablet.png" alt="Сценарии управления — умный дом" style="width:100%;height:280px;object-fit:cover;object-position:center;display:block;border-radius:16px 16px 0 0;">
+      <img loading="lazy" src="assets/images/scenarios-tablet.png" alt="Сценарии управления — умный дом" style="width:100%;height:280px;object-fit:cover;object-position:center;display:block;border-radius:16px 16px 0 0;">
       <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(10,26,12,.7) 100%);border-radius:16px 16px 0 0;"></div>
     </div>
     <div class="sol-modal-body">
@@ -1780,9 +1831,9 @@ function openCookiePolicyFromBanner(e){
 <!-- SOLUTION MODAL: Коммерческая недвижимость -->
 <div class="sol-modal-overlay" id="solModalOverlaycommercial">
   <div class="sol-modal" id="solModalCommercial">
-    <button class="sol-modal-close" onclick="closeSolModal()">✕</button>
+    <button class="sol-modal-close" onclick="closeSolModal()" aria-label="Закрыть">✕</button>
     <div style="position:relative;overflow:hidden;border-radius:16px 16px 0 0;margin:-1px -1px 0 -1px;">
-      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=780&q=80" alt="Коммерческая недвижимость — умное управление" style="width:100%;height:280px;object-fit:cover;display:block;border-radius:16px 16px 0 0;" onerror="this.style.background='#112214';this.style.height='200px'">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=780&q=80" alt="Коммерческая недвижимость — умное управление" style="width:100%;height:280px;object-fit:cover;display:block;border-radius:16px 16px 0 0;" onerror="this.style.background='#112214';this.style.height='200px'">
       <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(10,26,12,.7) 100%);border-radius:16px 16px 0 0;"></div>
     </div>
     <div class="sol-modal-body">
@@ -1842,9 +1893,9 @@ function openCookiePolicyFromBanner(e){
 <!-- SOLUTION MODAL: Отели и гостиничный бизнес -->
 <div class="sol-modal-overlay" id="solModalOverlayhotel">
   <div class="sol-modal" id="solModalHotel">
-    <button class="sol-modal-close" onclick="closeSolModal()">✕</button>
+    <button class="sol-modal-close" onclick="closeSolModal()" aria-label="Закрыть">✕</button>
     <div style="position:relative;overflow:hidden;border-radius:16px 16px 0 0;margin:-1px -1px 0 -1px;">
-      <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=780&q=80" alt="Умный отель — Loxone" style="width:100%;height:280px;object-fit:cover;display:block;border-radius:16px 16px 0 0;" onerror="this.style.background='#112214';this.style.height='200px'">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=780&q=80" alt="Умный отель — Loxone" style="width:100%;height:280px;object-fit:cover;display:block;border-radius:16px 16px 0 0;" onerror="this.style.background='#112214';this.style.height='200px'">
       <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(10,26,12,.7) 100%);border-radius:16px 16px 0 0;"></div>
     </div>
     <div class="sol-modal-body">
@@ -1904,9 +1955,9 @@ function openCookiePolicyFromBanner(e){
 <!-- SOLUTION MODAL: Жилое строительство -->
 <div class="sol-modal-overlay" id="solModalOverlayconstruction">
   <div class="sol-modal" id="solModalConstruction">
-    <button class="sol-modal-close" onclick="closeSolModal()">✕</button>
+    <button class="sol-modal-close" onclick="closeSolModal()" aria-label="Закрыть">✕</button>
     <div style="position:relative;overflow:hidden;border-radius:16px 16px 0 0;margin:-1px -1px 0 -1px;">
-      <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=780&q=80" alt="Умные новостройки — Loxone" style="width:100%;height:280px;object-fit:cover;display:block;border-radius:16px 16px 0 0;" onerror="this.style.background='#112214';this.style.height='200px'">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=780&q=80" alt="Умные новостройки — Loxone" style="width:100%;height:280px;object-fit:cover;display:block;border-radius:16px 16px 0 0;" onerror="this.style.background='#112214';this.style.height='200px'">
       <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(10,26,12,.7) 100%);border-radius:16px 16px 0 0;"></div>
     </div>
     <div class="sol-modal-body">
@@ -1966,9 +2017,9 @@ function openCookiePolicyFromBanner(e){
 <!-- SOLUTION MODAL: Дооснащение -->
 <div class="sol-modal-overlay" id="solModalOverlayretrofit">
   <div class="sol-modal" id="solModalRetrofit">
-    <button class="sol-modal-close" onclick="closeSolModal()">✕</button>
+    <button class="sol-modal-close" onclick="closeSolModal()" aria-label="Закрыть">✕</button>
     <div style="position:relative;border-radius:16px 16px 0 0;margin:-1px -1px 0 -1px;height:280px;overflow:hidden;background:#060f07;">
-      <svg viewBox="0 0 780 280" xmlns="http://www.w3.org/2000/svg" width="780" height="280" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+      <svg viewBox="0 0 780 280" xmlns="https://www.w3.org/2000/svg" width="780" height="280" style="position:absolute;top:0;left:0;width:100%;height:100%;">
         <!-- Background -->
         <rect width="780" height="280" fill="#0a1a0c"/>
         <rect width="780" height="280" fill="#1a3d1e" opacity="0.3"/>
@@ -2159,9 +2210,9 @@ function openCookiePolicyFromBanner(e){
 <!-- SOLUTION MODAL: Комфортное проживание -->
 <div class="sol-modal-overlay" id="solModalOverlaycomfort">
   <div class="sol-modal" id="solModalComfort">
-    <button class="sol-modal-close" onclick="closeSolModal()">✕</button>
+    <button class="sol-modal-close" onclick="closeSolModal()" aria-label="Закрыть">✕</button>
     <div style="position:relative;overflow:hidden;border-radius:16px 16px 0 0;margin:-1px -1px 0 -1px;">
-      <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?w=780&q=80" alt="Комфортное проживание — умный дом для семьи" style="width:100%;height:280px;object-fit:cover;display:block;border-radius:16px 16px 0 0;" onerror="this.style.background='#112214';this.style.height='200px'">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1600210492493-0946911123ea?w=780&q=80" alt="Комфортное проживание — умный дом для семьи" style="width:100%;height:280px;object-fit:cover;display:block;border-radius:16px 16px 0 0;" onerror="this.style.background='#112214';this.style.height='200px'">
       <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(10,26,12,.7) 100%);border-radius:16px 16px 0 0;"></div>
     </div>
     <div class="sol-modal-body">
@@ -2221,9 +2272,9 @@ function openCookiePolicyFromBanner(e){
 <!-- SOLUTION MODAL: Управление через приложение -->
 <div class="sol-modal-overlay" id="solModalOverlayapp">
   <div class="sol-modal" id="solModalApp">
-    <button class="sol-modal-close" onclick="closeSolModal()">✕</button>
+    <button class="sol-modal-close" onclick="closeSolModal()" aria-label="Закрыть">✕</button>
     <div style="position:relative;overflow:hidden;border-radius:16px 16px 0 0;margin:-1px -1px 0 -1px;">
-      <img src="assets/images/app-control.png" alt="Управление умным домом через приложение" style="width:100%;height:280px;object-fit:cover;object-position:center;display:block;border-radius:16px 16px 0 0;">
+      <img loading="lazy" src="assets/images/app-control.png" alt="Управление умным домом через приложение" style="width:100%;height:280px;object-fit:cover;object-position:center;display:block;border-radius:16px 16px 0 0;">
       <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(10,26,12,.7) 100%);border-radius:16px 16px 0 0;"></div>
     </div>
     <div class="sol-modal-body">
@@ -2293,9 +2344,9 @@ function openCookiePolicyFromBanner(e){
 <!-- SOLUTION MODAL: Автоматизация повседневных процессов -->
 <div class="sol-modal-overlay" id="solModalOverlayautomation">
   <div class="sol-modal" id="solModalAutomation">
-    <button class="sol-modal-close" onclick="closeSolModal()">✕</button>
+    <button class="sol-modal-close" onclick="closeSolModal()" aria-label="Закрыть">✕</button>
     <div style="position:relative;overflow:hidden;border-radius:16px 16px 0 0;margin:-1px -1px 0 -1px;">
-      <img src="assets/images/automation-dashboard.png" alt="Автоматизация повседневных процессов — умный дом" style="width:100%;height:280px;object-fit:cover;object-position:top;display:block;border-radius:16px 16px 0 0;">
+      <img loading="lazy" src="assets/images/automation-dashboard.png" alt="Автоматизация повседневных процессов — умный дом" style="width:100%;height:280px;object-fit:cover;object-position:top;display:block;border-radius:16px 16px 0 0;">
       <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(10,26,12,.7) 100%);border-radius:16px 16px 0 0;"></div>
     </div>
     <div class="sol-modal-body">
@@ -2374,9 +2425,9 @@ function openCookiePolicyFromBanner(e){
 <!-- SOLUTION MODAL: Управление освещением -->
 <div class="sol-modal-overlay" id="solModalOverlaylighting">
   <div class="sol-modal" id="solModalLighting">
-    <button class="sol-modal-close" onclick="closeSolModal()">✕</button>
+    <button class="sol-modal-close" onclick="closeSolModal()" aria-label="Закрыть">✕</button>
     <div style="position:relative;overflow:hidden;border-radius:16px 16px 0 0;margin:-1px -1px 0 -1px;">
-      <img src="assets/images/lighting-control.png" alt="Управление освещением LOGIC SMART HOUSE" style="width:100%;height:280px;object-fit:contain;object-position:center;display:block;border-radius:16px 16px 0 0;background:#111111;">
+      <img loading="lazy" src="assets/images/lighting-control.png" alt="Управление освещением LOGIC SMART HOUSE" style="width:100%;height:280px;object-fit:contain;object-position:center;display:block;border-radius:16px 16px 0 0;background:#111111;">
     </div>
     <div class="sol-modal-body">
       <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px;">
@@ -2445,9 +2496,9 @@ function openCookiePolicyFromBanner(e){
 <!-- SOLUTION MODAL: Световые сцены -->
 <div class="sol-modal-overlay" id="solModalOverlayscenes">
   <div class="sol-modal" id="solModalScenes">
-    <button class="sol-modal-close" onclick="closeSolModal()">✕</button>
+    <button class="sol-modal-close" onclick="closeSolModal()" aria-label="Закрыть">✕</button>
     <div style="position:relative;overflow:hidden;border-radius:16px 16px 0 0;margin:-1px -1px 0 -1px;">
-      <img src="assets/images/lighting-scenes.png" alt="Световые сцены LOGIC SMART HOUSE" style="width:100%;height:280px;object-fit:contain;object-position:center;display:block;border-radius:16px 16px 0 0;background:#111e13;">
+      <img loading="lazy" src="assets/images/lighting-scenes.png" alt="Световые сцены LOGIC SMART HOUSE" style="width:100%;height:280px;object-fit:contain;object-position:center;display:block;border-radius:16px 16px 0 0;background:#111e13;">
       <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(10,26,12,.7) 100%);border-radius:16px 16px 0 0;"></div>
     </div>
     <div class="sol-modal-body">
@@ -2517,9 +2568,9 @@ function openCookiePolicyFromBanner(e){
 <!-- SOLUTION MODAL: Мультирум-аудио -->
 <div class="sol-modal-overlay" id="solModalOverlayaudio">
   <div class="sol-modal" id="solModalAudio">
-    <button class="sol-modal-close" onclick="closeSolModal()">✕</button>
+    <button class="sol-modal-close" onclick="closeSolModal()" aria-label="Закрыть">✕</button>
     <div style="position:relative;overflow:hidden;border-radius:16px 16px 0 0;margin:-1px -1px 0 -1px;">
-      <img src="assets/images/audio-speaker.png" alt="Мультирум-аудио LOGIC SMART HOUSE" style="width:100%;height:280px;object-fit:cover;object-position:center;display:block;border-radius:16px 16px 0 0;">
+      <img loading="lazy" src="assets/images/audio-speaker.png" alt="Мультирум-аудио LOGIC SMART HOUSE" style="width:100%;height:280px;object-fit:cover;object-position:center;display:block;border-radius:16px 16px 0 0;">
       <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(10,26,12,.7) 100%);border-radius:16px 16px 0 0;"></div>
     </div>
     <div class="sol-modal-body">
@@ -2589,9 +2640,9 @@ function openCookiePolicyFromBanner(e){
 <!-- SOLUTION MODAL: Шторы и жалюзи -->
 <div class="sol-modal-overlay" id="solModalOverlayshading">
   <div class="sol-modal" id="solModalShading">
-    <button class="sol-modal-close" onclick="closeSolModal()">✕</button>
+    <button class="sol-modal-close" onclick="closeSolModal()" aria-label="Закрыть">✕</button>
     <div style="position:relative;overflow:hidden;border-radius:16px 16px 0 0;margin:-1px -1px 0 -1px;">
-      <img src="assets/images/shading-blinds.png" alt="Умные шторы и жалюзи LOGIC SMART HOUSE" style="width:100%;height:280px;object-fit:cover;object-position:center;display:block;border-radius:16px 16px 0 0;">
+      <img loading="lazy" src="assets/images/shading-blinds.png" alt="Умные шторы и жалюзи LOGIC SMART HOUSE" style="width:100%;height:280px;object-fit:cover;object-position:center;display:block;border-radius:16px 16px 0 0;">
       <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(10,26,12,.7) 100%);border-radius:16px 16px 0 0;"></div>
     </div>
     <div class="sol-modal-body">

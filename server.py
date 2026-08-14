@@ -26,8 +26,8 @@ def _is_rate_limited(ip: str) -> bool:
 # ── Security headers ─────────────────────────────────────────────────────────
 @app.after_request
 def set_security_headers(response):
-    response.headers.pop('X-Frame-Options', None)
-    response.headers['Content-Security-Policy'] = "frame-ancestors *"
+    response.headers['X-Frame-Options'] = 'SAMEORIGIN'
+    response.headers['Content-Security-Policy'] = "frame-ancestors 'self'"
     response.headers['X-Content-Type-Options'] = 'nosniff'
     response.headers['Referrer-Policy'] = 'strict-origin-when-cross-origin'
     response.headers['Permissions-Policy'] = 'geolocation=(), microphone=(), camera=()'
