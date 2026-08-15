@@ -1,6 +1,6 @@
 // Logo — direct path
-document.getElementById('navLogo').src = '/assets/logo.webp';
-document.getElementById('footerLogo').src = '/assets/logo.webp';
+document.getElementById('navLogo').src = '/assets/logo.jpg';
+document.getElementById('footerLogo').src = '/assets/logo.jpg';
 
 // Cursor — only on non-touch (pointer) devices
 const cursor = document.getElementById('cursor');

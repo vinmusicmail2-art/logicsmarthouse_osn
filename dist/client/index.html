@@ -8,21 +8,16 @@
 <meta property="og:title" content="LOGIC SMART HOUSE — Интеллектуальная экосистема для вашего дома">
 <meta property="og:description" content="Интеллектуальная экосистема управления умным домом на базе Loxone. Управление климатом, освещением, безопасностью и энергопотреблением.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="/assets/logo.webp">
+<meta property="og:image" content="/assets/logo.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="LOGIC SMART HOUSE — Интеллектуальная экосистема для вашего дома">
 <meta name="twitter:description" content="Интеллектуальная экосистема управления умным домом на базе Loxone.">
 <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<meta name="build-version" content="2026-08-14-02">
-<link rel="preload" as="image" href="/assets/logo.webp">
-<link rel="preload" as="image" href="/assets/smart-house-hero.webp" fetchpriority="high">
-<link rel="preload" as="image" href="/assets/images/feature-lighting-generated.webp">
-<link rel="preload" as="image" href="/assets/images/feature-climate-generated.webp">
-<link rel="preload" as="image" href="/assets/images/feature-security-generated.webp">
-<link rel="preload" as="image" href="/assets/images/feature-energy-generated.webp">
-<link rel="preload" as="image" href="/assets/images/feature-audio-generated.webp">
+<meta name="build-version" content="2026-08-15-performance-01">
+<link rel="preload" as="image" href="/assets/logo.jpg" type="image/jpeg">
+<link rel="preload" as="image" href="/assets/smart-house-hero.jpg" type="image/jpeg" fetchpriority="high">
 <title>LOGIC SMART HOUSE — Интеллектуальная экосистема для вашего дома</title>
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -252,10 +247,10 @@ nav.scrolled{height:70px;}
 .solutions .section-eyebrow{display:none;}
 .solutions-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);}
 .solution-card{background:var(--bg2);padding:20px 28px;position:relative;overflow:hidden;cursor:default;transition:background .3s;}
-.solution-card[style*="--sol-image"]{background:var(--bg2);}
-.solution-card[style*="--sol-image"]::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,12,6,.18),rgba(4,12,6,.36)),var(--sol-image) center/cover no-repeat;opacity:.42;transition:opacity .35s;z-index:0;}
-.solution-card[style*="--sol-image"]:hover::after{opacity:.52;}
-.solution-card[style*="--sol-image"] > *{position:relative;z-index:1;}
+.solution-card[data-bg-url]{background:var(--bg2);}
+.solution-card[data-bg-url]::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,12,6,.18),rgba(4,12,6,.36)),var(--sol-image) center/cover no-repeat;opacity:.42;transition:opacity .35s;z-index:0;}
+.solution-card[data-bg-url]:hover::after{opacity:.52;}
+.solution-card[data-bg-url] > *{position:relative;z-index:1;}
 .solution-card:hover{background:var(--bg3);}
 .solution-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:transparent;transition:all .3s;}
 .solution-card:hover::before{background:var(--green);}
@@ -794,7 +789,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 52px
 <!-- NAV -->
 <nav id="navbar">
   <a class="nav-logo-wrap" href="#" style="text-decoration:none;">
-    <img class="nav-logo-img" id="navLogo" src="/assets/logo.webp" alt="Logic Smart House" decoding="async">
+    <img class="nav-logo-img" id="navLogo" src="/assets/logo.jpg" alt="Logic Smart House" decoding="async">
     <div class="nav-logo-text">LOGIC <span>SMART</span> HOUSE<small style="color:rgba(232,245,234,.72)">Лоджик Смарт Хаус</small></div>
   </a>
   <div class="nav-links">
@@ -905,7 +900,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 52px
         </div>
         <!-- Center: full image -->
         <div style="flex:1;line-height:0;overflow:hidden;">
-          <img loading="eager" fetchpriority="high" decoding="async" width="1214" height="880" src="/assets/smart-house-hero.webp" alt="Logic Smart House" style="width:100%;height:auto;display:block;outline:1.2mm solid #1c1f1d;outline-offset:-1.2mm;" />
+          <img loading="eager" fetchpriority="high" decoding="async" width="1214" height="880" src="/assets/smart-house-hero.jpg" alt="Logic Smart House" style="width:100%;height:auto;display:block;outline:1.2mm solid #1c1f1d;outline-offset:-1.2mm;" />
         </div>
         <!-- Right column -->
         <div style="width:128px;flex-shrink:0;display:flex;flex-direction:column;border-left:1px solid rgba(45,138,69,.2);background:rgba(19,36,21,.7);backdrop-filter:blur(8px);">
@@ -944,7 +939,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 52px
 <!-- FEATURES STRIP -->
 <div class="features-strip reveal">
 
-  <div class="feature-item" style="--feature-image:url('/assets/images/feature-lighting-generated.webp')">
+  <div class="feature-item" data-bg-prop="--feature-image" data-bg-url="/assets/images/feature-lighting-generated.jpg">
     <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></div>
     <div class="feature-text"><strong>Умное освещение</strong><span>Сцены и автоматический контроль</span></div>
     <div class="feature-tooltip">
@@ -958,7 +953,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 52px
     </div>
   </div>
 
-  <div class="feature-item" style="--feature-image:url('/assets/images/feature-climate-generated.webp')">
+  <div class="feature-item" data-bg-prop="--feature-image" data-bg-url="/assets/images/feature-climate-generated.jpg">
     <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 00-5 0v11.26a4.5 4.5 0 105 0z"/></svg></div>
     <div class="feature-text"><strong>Климат-контроль</strong><span>Самообучающийся алгоритм</span></div>
     <div class="feature-tooltip">
@@ -972,7 +967,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 52px
     </div>
   </div>
 
-  <div class="feature-item" style="--feature-image:url('/assets/images/feature-security-generated.webp')">
+  <div class="feature-item" data-bg-prop="--feature-image" data-bg-url="/assets/images/feature-security-generated.jpg">
     <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
     <div class="feature-text"><strong>Безопасность</strong><span>Пожар, протечки, взлом 24/7</span></div>
     <div class="feature-tooltip">
@@ -986,7 +981,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 52px
     </div>
   </div>
 
-  <div class="feature-item" style="--feature-image:url('/assets/images/feature-energy-generated.webp')">
+  <div class="feature-item" data-bg-prop="--feature-image" data-bg-url="/assets/images/feature-energy-generated.jpg">
     <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
     <div class="feature-text"><strong>Энергоэффективность</strong><span>До 40% экономии</span></div>
     <div class="feature-tooltip">
@@ -1000,7 +995,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 52px
     </div>
   </div>
 
-  <div class="feature-item" style="--feature-image:url('/assets/images/feature-audio-generated.webp')">
+  <div class="feature-item" data-bg-prop="--feature-image" data-bg-url="/assets/images/feature-audio-generated.jpg">
     <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
     <div class="feature-text"><strong>Мультирум аудио</strong><span>Музыка и оповещение</span></div>
     <div class="feature-tooltip">
@@ -1027,12 +1022,12 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 52px
     </div>
   </div>
   <div class="solutions-grid reveal">
-    <div class="solution-card solution-card--private" style="--sol-image:url('/assets/images/solution-private-house.webp')" onclick="openSolModal('private')"><div class="solution-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg></div><h3>Частный дом</h3><p>Полная автоматизация загородного или городского дома. Все системы в одном приложении.</p><button class="solution-link" onclick="event.stopPropagation();openSolModal('private')">Подробнее →</button></div>
-    <div class="solution-card solution-card--commercial" style="--sol-image:url('/assets/images/solution-commercial.webp')" onclick="openSolModal('commercial')"><div class="solution-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg></div><h3>Коммерческая недвижимость</h3><p>Умное управление офисами, торговыми центрами и производственными зданиями.</p><button class="solution-link" onclick="event.stopPropagation();openSolModal('commercial')">Подробнее →</button></div>
-    <div class="solution-card" style="--sol-image:url('/assets/images/solution-hotel.webp')" onclick="openSolModal('hotel')"><div class="solution-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V5a2 2 0 012-2h14a2 2 0 012 2v16"/><path d="M3 21h18M9 21v-5h6v5"/><rect x="7" y="7" width="3" height="3"/><rect x="14" y="7" width="3" height="3"/><rect x="7" y="13" width="3" height="3"/><rect x="14" y="13" width="3" height="3"/></svg></div><h3>Отели и гостиничный бизнес</h3><p>Создайте незабываемый опыт для гостей с интеллектуальными системами управления комфортом.</p><button class="solution-link" onclick="event.stopPropagation();openSolModal('hotel')">Подробнее →</button></div>
-    <div class="solution-card" style="--sol-image:url('/assets/images/solution-construction.webp')" onclick="openSolModal('construction')"><div class="solution-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="14" width="20" height="7" rx="1"/><path d="M6 14V8M18 14V8M6 8h12M12 8V3"/><path d="M9 3h6"/></svg></div><h3>Жилое строительство</h3><p>Встроенная автоматизация для новостроек. Повысьте ценность объекта для покупателей.</p><button class="solution-link" onclick="event.stopPropagation();openSolModal('construction')">Подробнее →</button></div>
-    <div class="solution-card" style="--sol-image:url('/assets/images/solution-retrofit.webp')" onclick="openSolModal('retrofit')"><div class="solution-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div><h3>Дооснащение</h3><p>Интеллектуальная экосистема без капитального ремонта. Беспроводные решения для существующих зданий.</p><button class="solution-link" onclick="event.stopPropagation();openSolModal('retrofit')">Подробнее →</button></div>
-    <div class="solution-card" style="--sol-image:url('/assets/images/solution-comfort.webp')" onclick="openSolModal('comfort')"><div class="solution-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/><path d="M15 11l2 2 4-4"/></svg></div><h3>Комфортное проживание</h3><p>Автоматизация для максимального комфорта с учётом потребностей всей семьи.</p><button class="solution-link" onclick="event.stopPropagation();openSolModal('comfort')">Подробнее →</button></div>
+    <div class="solution-card solution-card--private" data-bg-prop="--sol-image" data-bg-url="/assets/images/solution-private-house.jpg" onclick="openSolModal('private')"><div class="solution-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg></div><h3>Частный дом</h3><p>Полная автоматизация загородного или городского дома. Все системы в одном приложении.</p><button class="solution-link" onclick="event.stopPropagation();openSolModal('private')">Подробнее →</button></div>
+    <div class="solution-card solution-card--commercial" data-bg-prop="--sol-image" data-bg-url="/assets/images/solution-commercial.jpg" onclick="openSolModal('commercial')"><div class="solution-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg></div><h3>Коммерческая недвижимость</h3><p>Умное управление офисами, торговыми центрами и производственными зданиями.</p><button class="solution-link" onclick="event.stopPropagation();openSolModal('commercial')">Подробнее →</button></div>
+    <div class="solution-card" data-bg-prop="--sol-image" data-bg-url="/assets/images/solution-hotel.jpg" onclick="openSolModal('hotel')"><div class="solution-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V5a2 2 0 012-2h14a2 2 0 012 2v16"/><path d="M3 21h18M9 21v-5h6v5"/><rect x="7" y="7" width="3" height="3"/><rect x="14" y="7" width="3" height="3"/><rect x="7" y="13" width="3" height="3"/><rect x="14" y="13" width="3" height="3"/></svg></div><h3>Отели и гостиничный бизнес</h3><p>Создайте незабываемый опыт для гостей с интеллектуальными системами управления комфортом.</p><button class="solution-link" onclick="event.stopPropagation();openSolModal('hotel')">Подробнее →</button></div>
+    <div class="solution-card" data-bg-prop="--sol-image" data-bg-url="/assets/images/solution-construction.jpg" onclick="openSolModal('construction')"><div class="solution-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="14" width="20" height="7" rx="1"/><path d="M6 14V8M18 14V8M6 8h12M12 8V3"/><path d="M9 3h6"/></svg></div><h3>Жилое строительство</h3><p>Встроенная автоматизация для новостроек. Повысьте ценность объекта для покупателей.</p><button class="solution-link" onclick="event.stopPropagation();openSolModal('construction')">Подробнее →</button></div>
+    <div class="solution-card" data-bg-prop="--sol-image" data-bg-url="/assets/images/solution-retrofit.jpg" onclick="openSolModal('retrofit')"><div class="solution-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div><h3>Дооснащение</h3><p>Интеллектуальная экосистема без капитального ремонта. Беспроводные решения для существующих зданий.</p><button class="solution-link" onclick="event.stopPropagation();openSolModal('retrofit')">Подробнее →</button></div>
+    <div class="solution-card" data-bg-prop="--sol-image" data-bg-url="/assets/images/solution-comfort.jpg" onclick="openSolModal('comfort')"><div class="solution-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/><path d="M15 11l2 2 4-4"/></svg></div><h3>Комфортное проживание</h3><p>Автоматизация для максимального комфорта с учётом потребностей всей семьи.</p><button class="solution-link" onclick="event.stopPropagation();openSolModal('comfort')">Подробнее →</button></div>
   </div>
 </section>
 
@@ -1094,7 +1089,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 52px
   <div class="new-cards-grid reveal">
 
     <div class="new-card">
-      <div class="new-card-media"><img src="/assets/images/lighting-control-daywide.webp" alt="" aria-hidden="true"></div>
+      <div class="new-card-media"><img loading="lazy" decoding="async" src="/assets/images/lighting-control-daywide.jpg" alt="" aria-hidden="true"></div>
       <div class="new-card-body">
         <div class="new-card-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></div>
         <h3 class="new-card-title">Управление освещением</h3>
@@ -1104,7 +1099,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 52px
     </div>
 
     <div class="new-card">
-      <div class="new-card-media"><img src="/assets/images/lighting-scenes-daywide.webp" alt="" aria-hidden="true"></div>
+      <div class="new-card-media"><img loading="lazy" decoding="async" src="/assets/images/lighting-scenes-daywide.jpg" alt="" aria-hidden="true"></div>
       <div class="new-card-body">
         <div class="new-card-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
         <h3 class="new-card-title">Световые сцены</h3>
@@ -1114,7 +1109,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 52px
     </div>
 
     <div class="new-card">
-      <div class="new-card-media"><img src="/assets/images/lighting-audio-daywide.webp" alt="" aria-hidden="true"></div>
+      <div class="new-card-media"><img loading="lazy" decoding="async" src="/assets/images/lighting-audio-daywide.jpg" alt="" aria-hidden="true"></div>
       <div class="new-card-body">
         <div class="new-card-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
         <h3 class="new-card-title">Мультирум-аудио</h3>
@@ -1124,7 +1119,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 52px
     </div>
 
     <div class="new-card">
-      <div class="new-card-media"><img src="/assets/images/lighting-shading-daywide.webp" alt="" aria-hidden="true"></div>
+      <div class="new-card-media"><img loading="lazy" decoding="async" src="/assets/images/lighting-shading-daywide.jpg" alt="" aria-hidden="true"></div>
       <div class="new-card-body">
         <div class="new-card-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/><rect x="10" y="3" width="4" height="4"/></svg></div>
         <h3 class="new-card-title">Шторы и жалюзи</h3>
@@ -1150,7 +1145,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 52px
   <div class="new-cards-grid reveal">
 
     <div class="new-card">
-      <div class="new-card-media"><img src="/assets/images/climate-hvac-framefit.webp" alt="" aria-hidden="true"></div>
+      <div class="new-card-media"><img loading="lazy" decoding="async" src="/assets/images/climate-hvac-framefit.jpg" alt="" aria-hidden="true"></div>
       <div class="new-card-body">
         <div class="new-card-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 00-5 0v11.26a4.5 4.5 0 105 0z"/></svg></div>
         <h3 class="new-card-title">Отопление, вентиляция, кондиционирование</h3>
@@ -1160,7 +1155,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 52px
     </div>
 
     <div class="new-card">
-      <div class="new-card-media"><img src="/assets/images/climate-sensors-framefit.webp" alt="" aria-hidden="true"></div>
+      <div class="new-card-media"><img loading="lazy" decoding="async" src="/assets/images/climate-sensors-framefit.jpg" alt="" aria-hidden="true"></div>
       <div class="new-card-body">
         <div class="new-card-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg></div>
         <h3 class="new-card-title">Контроль температуры и влажности</h3>
@@ -1170,7 +1165,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 52px
     </div>
 
     <div class="new-card">
-      <div class="new-card-media"><img src="/assets/images/climate-efficiency-framefit.webp" alt="" aria-hidden="true"></div>
+      <div class="new-card-media"><img loading="lazy" decoding="async" src="/assets/images/climate-efficiency-framefit.jpg" alt="" aria-hidden="true"></div>
       <div class="new-card-body">
         <div class="new-card-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
         <h3 class="new-card-title">Энергоэффективность и экономия</h3>
@@ -1180,7 +1175,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 52px
     </div>
 
     <div class="new-card">
-      <div class="new-card-media"><img src="/assets/images/climate-heatpump-framefit.webp" alt="" aria-hidden="true"></div>
+      <div class="new-card-media"><img loading="lazy" decoding="async" src="/assets/images/climate-heatpump-framefit.jpg" alt="" aria-hidden="true"></div>
       <div class="new-card-body">
         <div class="new-card-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg></div>
         <h3 class="new-card-title">Тепловой насос</h3>
@@ -1206,7 +1201,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 52px
   <div class="new-cards-grid reveal">
 
     <div class="new-card">
-      <div class="new-card-media"><img src="/assets/images/security-access-framefit.webp" alt="" aria-hidden="true"></div>
+      <div class="new-card-media"><img loading="lazy" decoding="async" src="/assets/images/security-access-framefit.jpg" alt="" aria-hidden="true"></div>
       <div class="new-card-body">
         <div class="new-card-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
         <h3 class="new-card-title">Контроль доступа</h3>
@@ -1216,7 +1211,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 52px
     </div>
 
     <div class="new-card">
-      <div class="new-card-media"><img src="/assets/images/security-fire-leak-framefit.webp" alt="" aria-hidden="true"></div>
+      <div class="new-card-media"><img loading="lazy" decoding="async" src="/assets/images/security-fire-leak-framefit.jpg" alt="" aria-hidden="true"></div>
       <div class="new-card-body">
         <div class="new-card-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
         <h3 class="new-card-title">Защита от пожара и протечек</h3>
@@ -1226,7 +1221,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 52px
     </div>
 
     <div class="new-card">
-      <div class="new-card-media"><img src="/assets/images/security-perimeter-framefit.webp" alt="" aria-hidden="true"></div>
+      <div class="new-card-media"><img loading="lazy" decoding="async" src="/assets/images/security-perimeter-framefit.jpg" alt="" aria-hidden="true"></div>
       <div class="new-card-body">
         <div class="new-card-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M1 6l11 6 11-6M1 6v12l11 6 11-6V6"/></svg></div>
         <h3 class="new-card-title">Видеонаблюдение и периметр</h3>
@@ -1236,7 +1231,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 52px
     </div>
 
     <div class="new-card">
-      <div class="new-card-media"><img src="/assets/images/security-monitoring-framefit.webp" alt="" aria-hidden="true"></div>
+      <div class="new-card-media"><img loading="lazy" decoding="async" src="/assets/images/security-monitoring-framefit.jpg" alt="" aria-hidden="true"></div>
       <div class="new-card-body">
         <div class="new-card-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
         <h3 class="new-card-title">Мониторинг 24/7</h3>
@@ -1265,7 +1260,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 52px
   <div class="new-cards-grid reveal">
 
     <div class="new-card">
-      <div class="new-card-media"><img src="/assets/images/objects-private-house-wide.webp" alt="" aria-hidden="true"></div>
+      <div class="new-card-media"><img loading="lazy" decoding="async" src="/assets/images/objects-private-house-wide.jpg" alt="" aria-hidden="true"></div>
       <div class="new-card-body">
         <div class="new-card-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg></div>
         <h3 class="new-card-title">Частный дом / коттедж</h3>
@@ -1275,7 +1270,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 52px
     </div>
 
     <div class="new-card new-card--minihotel">
-      <div class="new-card-media"><img src="/assets/images/objects-minihotel-day-framefit.webp" alt="" aria-hidden="true"></div>
+      <div class="new-card-media"><img loading="lazy" decoding="async" src="/assets/images/objects-minihotel-day-framefit.jpg" alt="" aria-hidden="true"></div>
       <div class="new-card-body">
         <div class="new-card-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V5a2 2 0 012-2h14a2 2 0 012 2v16"/><path d="M3 21h18M9 21v-5h6v5"/><rect x="7" y="7" width="3" height="3"/><rect x="14" y="7" width="3" height="3"/><rect x="7" y="13" width="3" height="3"/><rect x="14" y="13" width="3" height="3"/></svg></div>
         <h3 class="new-card-title">Автоматизация малого бизнеса</h3>
@@ -1285,7 +1280,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 52px
     </div>
 
     <div class="new-card">
-      <div class="new-card-media"><img src="/assets/images/objects-commercial-framewide.webp" alt="" aria-hidden="true"></div>
+      <div class="new-card-media"><img loading="lazy" decoding="async" src="/assets/images/objects-commercial-framewide.jpg" alt="" aria-hidden="true"></div>
       <div class="new-card-body">
         <div class="new-card-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg></div>
         <h3 class="new-card-title">Коммерческая недвижимость</h3>
@@ -1295,7 +1290,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 52px
     </div>
 
     <div class="new-card">
-      <div class="new-card-media"><img src="/assets/images/objects-residential-wide.webp" alt="" aria-hidden="true"></div>
+      <div class="new-card-media"><img loading="lazy" decoding="async" src="/assets/images/objects-residential-wide.jpg" alt="" aria-hidden="true"></div>
       <div class="new-card-body">
         <div class="new-card-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="14" width="20" height="7" rx="1"/><path d="M6 14V8M18 14V8M6 8h12M12 8V3"/><path d="M9 3h6"/></svg></div>
         <h3 class="new-card-title">Жилые комплексы и застройщики</h3>
@@ -1313,39 +1308,39 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 52px
   <h2 class="section-title" style="text-align:center;">Оборудование и объекты</h2>
   <div class="photo-grid">
     <div class="photo-cell">
-      <img loading="lazy" src="assets/images/gallery_1.jpg" class="real-photo" alt="Touch Pure Flex панель">
+      <img loading="lazy" decoding="async" src="assets/images/gallery_1.jpg" class="real-photo" alt="Touch Pure Flex панель">
       <div class="photo-cell-overlay"><span class="photo-cell-tag">Продукт</span><div class="photo-cell-title">Touch Pure Flex</div></div>
     </div>
     <div class="photo-cell">
-      <img loading="lazy" src="assets/images/gallery_2_generated.webp" class="real-photo" alt="Умный номер отеля">
+      <img loading="lazy" decoding="async" src="assets/images/gallery_2_generated.jpg" class="real-photo" alt="Умный номер отеля">
       <div class="photo-cell-overlay"><span class="photo-cell-tag">Интерьер</span><div class="photo-cell-title">Умный номер отеля</div></div>
     </div>
     <div class="photo-cell">
-      <img loading="lazy" src="assets/images/gallery_3.jpg" class="real-photo" alt="Умный интерьер с автоматизацией" style="filter:brightness(.83) saturate(1.15);">
+      <img loading="lazy" decoding="async" src="assets/images/gallery_3.jpg" class="real-photo" alt="Умный интерьер с автоматизацией" style="filter:brightness(.83) saturate(1.15);">
       <div class="photo-cell-overlay"><span class="photo-cell-tag">Жилой дом</span><div class="photo-cell-title">Умная жизнь</div></div>
     </div>
     <div class="photo-cell">
-      <img loading="lazy" src="assets/images/gallery_4.jpg" class="real-photo" alt="NFC замок Code Touch">
+      <img loading="lazy" decoding="async" src="assets/images/gallery_4.jpg" class="real-photo" alt="NFC замок Code Touch">
       <div class="photo-cell-overlay"><span class="photo-cell-tag">Доступ</span><div class="photo-cell-title">NFC Code Touch</div></div>
     </div>
     <div class="photo-cell">
-      <img loading="lazy" src="assets/images/gallery_office_generated.webp" class="real-photo" alt="Умный офис с автоматизацией">
+      <img loading="lazy" decoding="async" src="assets/images/gallery_office_generated.jpg" class="real-photo" alt="Умный офис с автоматизацией">
       <div class="photo-cell-overlay"><span class="photo-cell-tag">Коммерция</span><div class="photo-cell-title">Умный офис</div></div>
     </div>
     <div class="photo-cell">
-      <img loading="lazy" src="assets/images/gallery_miniserver_generated.webp" class="real-photo" alt="Loxone Miniserver">
+      <img loading="lazy" decoding="async" src="assets/images/gallery_miniserver_generated.jpg" class="real-photo" alt="Loxone Miniserver">
       <div class="photo-cell-overlay"><span class="photo-cell-tag">Система</span><div class="photo-cell-title">Loxone Miniserver</div></div>
     </div>
     <div class="photo-cell">
-      <img loading="lazy" src="assets/images/gallery_server_generated.webp" class="real-photo" alt="Серверная щитовая автоматизации">
+      <img loading="lazy" decoding="async" src="assets/images/gallery_server_generated.jpg" class="real-photo" alt="Серверная щитовая автоматизации">
       <div class="photo-cell-overlay"><span class="photo-cell-tag">Система</span><div class="photo-cell-title">Сервер автоматизации</div></div>
     </div>
     <div class="photo-cell">
-      <img loading="lazy" src="assets/images/gallery_security_generated.webp" class="real-photo" alt="Интеллектуальная система безопасности">
+      <img loading="lazy" decoding="async" src="assets/images/gallery_security_generated.jpg" class="real-photo" alt="Интеллектуальная система безопасности">
       <div class="photo-cell-overlay"><span class="photo-cell-tag">Безопасность</span><div class="photo-cell-title">Интеллектуальная безопасность</div></div>
     </div>
     <div class="photo-cell">
-      <img loading="lazy" src="assets/images/gallery_app_generated.webp" class="real-photo" alt="Приложение владельца">
+      <img loading="lazy" decoding="async" src="assets/images/gallery_app_generated.jpg" class="real-photo" alt="Приложение владельца">
       <div class="photo-cell-overlay"><span class="photo-cell-tag">Управление</span><div class="photo-cell-title">Приложение владельца</div></div>
     </div>
   </div>
@@ -1358,10 +1353,10 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 52px
     <h2 class="section-title" style="text-align:center;">От идеи до<br>интеллектуальной экосистемы</h2>
   </div>
 <div class="process-steps reveal">
-    <div class="process-step" style="--step-image:url('/assets/images/process-consultation.webp')"><div class="step-num">01</div><div class="step-title">Консультация</div><p class="step-desc">Обсуждаем ваши потребности, объект и бюджет. Предлагаем оптимальную конфигурацию системы.</p><div class="step-connector">→</div></div>
-    <div class="process-step" style="--step-image:url('/assets/images/process-design.webp')"><div class="step-num">02</div><div class="step-title">Проектирование</div><p class="step-desc">Разрабатываем детальный проект автоматизации. Подбираем оборудование и планируем монтаж.</p><div class="step-connector">→</div></div>
-    <div class="process-step" style="--step-image:url('/assets/images/process-installation.webp')"><div class="step-num">03</div><div class="step-title">Монтаж</div><p class="step-desc">Сертифицированные партнёры устанавливают и настраивают систему в строгом соответствии с проектом.</p><div class="step-connector">→</div></div>
-    <div class="process-step" style="--step-image:url('/assets/images/process-support.webp')"><div class="step-num">04</div><div class="step-title">Поддержка</div><p class="step-desc">Обучение работе с системой, техническая поддержка 24/7 и удалённый мониторинг.</p></div>
+    <div class="process-step" data-bg-prop="--step-image" data-bg-url="/assets/images/process-consultation.jpg"><div class="step-num">01</div><div class="step-title">Консультация</div><p class="step-desc">Обсуждаем ваши потребности, объект и бюджет. Предлагаем оптимальную конфигурацию системы.</p><div class="step-connector">→</div></div>
+    <div class="process-step" data-bg-prop="--step-image" data-bg-url="/assets/images/process-design.jpg"><div class="step-num">02</div><div class="step-title">Проектирование</div><p class="step-desc">Разрабатываем детальный проект автоматизации. Подбираем оборудование и планируем монтаж.</p><div class="step-connector">→</div></div>
+    <div class="process-step" data-bg-prop="--step-image" data-bg-url="/assets/images/process-installation.jpg"><div class="step-num">03</div><div class="step-title">Монтаж</div><p class="step-desc">Сертифицированные партнёры устанавливают и настраивают систему в строгом соответствии с проектом.</p><div class="step-connector">→</div></div>
+    <div class="process-step" data-bg-prop="--step-image" data-bg-url="/assets/images/process-support.jpg"><div class="step-num">04</div><div class="step-title">Поддержка</div><p class="step-desc">Обучение работе с системой, техническая поддержка 24/7 и удалённый мониторинг.</p></div>
   </div>
 </section>
 
@@ -1377,7 +1372,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 52px
 
 <!-- CTA -->
 <div class="cta-section reveal">
-  <img loading="lazy" class="cta-bg-img" src="assets/images/cta-bg-generated.webp" alt="">
+  <img loading="lazy" class="cta-bg-img" src="assets/images/cta-bg-generated.jpg" alt="">
   <div class="cta-glow"></div>
   <h2>Готовы сделать<br>ваш дом <span>умнее?</span></h2>
   <div class="cta-right">
@@ -1393,7 +1388,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 52px
   <div class="footer-top">
     <div class="footer-brand">
       <div class="footer-logo-wrap">
-        <img class="footer-logo-img" id="footerLogo" src="/assets/logo.webp" alt="Logic Smart House" decoding="async">
+        <img class="footer-logo-img" id="footerLogo" src="/assets/logo.jpg" alt="Logic Smart House" decoding="async">
         <div class="footer-logo-text">LOGIC <span>SMART</span> HOUSE<small style="display:block;font-size:9px;font-weight:500;letter-spacing:3px;color:rgba(232,245,234,.72);margin-top:1px;">Лоджик Смарт Хаус</small></div>
       </div>
       <p>Интеллектуальная экосистема для вашего дома — от частного коттеджа до коммерческого здания. Официальный партнёр Loxone.</p>
@@ -1418,28 +1413,30 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 52px
 </footer>
 
 <script>
-// Logo — direct path
-document.getElementById('navLogo').src = '/assets/logo.webp';
-document.getElementById('footerLogo').src = '/assets/logo.webp';
-
-// Version image-backed cards so the browser does not reuse stale backgrounds.
-(function bustVisualCache(){
-  const version = '20260814';
-  document.querySelectorAll('.feature-item, .solution-card').forEach((el) => {
-    ['--feature-image', '--sol-image'].forEach((prop) => {
-      const raw = el.style.getPropertyValue(prop).trim();
-      if (!raw) return;
-      const next = raw.replace(/url\((['"]?)(.*?)\1\)/, (_, __, url) => {
-        const hasQuery = url.includes('?');
-        return `url("${url}${hasQuery ? '&' : '?'}v=${version}")`;
-      });
-      el.style.setProperty(prop, next);
+// Load decorative backgrounds shortly before they enter the viewport.
+(function lazyLoadBackgrounds(){
+  const cards = document.querySelectorAll('[data-bg-url][data-bg-prop]');
+  const load = (card) => {
+    card.style.setProperty(card.dataset.bgProp, `url("${card.dataset.bgUrl}")`);
+    card.dataset.bgLoaded = 'true';
+  };
+  if (!('IntersectionObserver' in window)) {
+    cards.forEach(load);
+    return;
+  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      load(entry.target);
+      observer.unobserve(entry.target);
     });
-  });
+  }, { rootMargin: '600px 0px' });
+  cards.forEach((card) => observer.observe(card));
 })();
 
 // Auto-refresh the visible page when the HTML build version changes.
-(function watchBuildVersion(){
+(function watchBuildVersionLocally(){
+  if (location.hostname !== '127.0.0.1' && location.hostname !== 'localhost') return;
   const current = document.querySelector('meta[name="build-version"]')?.content || '';
   const url = location.href.split('#')[0].split('?')[0];
   let busy = false;
@@ -1687,7 +1684,7 @@ function openCookiePolicyFromBanner(e){
   <div class="sol-modal" id="solModalPrivate">
     <button class="sol-modal-close" onclick="closeSolModal()" aria-label="Закрыть">✕</button>
     <div style="position:relative;overflow:hidden;border-radius:16px 16px 0 0;margin:-1px -1px 0 -1px;">
-      <img loading="lazy" src="assets/images/private-house.webp" alt="Частный дом — умная автоматизация LOGIC SMART HOUSE" style="width:100%;height:280px;object-fit:cover;object-position:center;display:block;border-radius:16px 16px 0 0;">
+      <img loading="lazy" decoding="async" src="assets/images/private-house.jpg" alt="Частный дом — умная автоматизация LOGIC SMART HOUSE" style="width:100%;height:280px;object-fit:cover;object-position:center;display:block;border-radius:16px 16px 0 0;">
       <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(10,26,12,.7) 100%);border-radius:16px 16px 0 0;"></div>
     </div>
     <div class="sol-modal-body">
@@ -1760,7 +1757,7 @@ function openCookiePolicyFromBanner(e){
   <div class="sol-modal" id="solModalTurnkey">
     <button class="sol-modal-close" onclick="closeSolModal()" aria-label="Закрыть">✕</button>
     <div style="position:relative;overflow:hidden;border-radius:16px 16px 0 0;margin:-1px -1px 0 -1px;">
-      <img loading="lazy" src="assets/images/miniserver-hub.webp" alt="Умный дом под ключ — экосистема LOGIC SMART HOUSE" style="width:100%;height:280px;object-fit:cover;object-position:center;display:block;border-radius:16px 16px 0 0;">
+      <img loading="lazy" decoding="async" src="assets/images/miniserver-hub.jpg" alt="Умный дом под ключ — экосистема LOGIC SMART HOUSE" style="width:100%;height:280px;object-fit:cover;object-position:center;display:block;border-radius:16px 16px 0 0;">
       <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(10,26,12,.7) 100%);border-radius:16px 16px 0 0;"></div>
     </div>
     <div class="sol-modal-body">
@@ -1842,7 +1839,7 @@ function openCookiePolicyFromBanner(e){
   <div class="sol-modal" id="solModalScenarios">
     <button class="sol-modal-close" onclick="closeSolModal()" aria-label="Закрыть">✕</button>
     <div style="position:relative;overflow:hidden;border-radius:16px 16px 0 0;margin:-1px -1px 0 -1px;">
-      <img loading="lazy" src="assets/images/scenarios-tablet.webp" alt="Сценарии управления — умный дом" style="width:100%;height:280px;object-fit:cover;object-position:center;display:block;border-radius:16px 16px 0 0;">
+      <img loading="lazy" decoding="async" src="assets/images/scenarios-tablet.jpg" alt="Сценарии управления — умный дом" style="width:100%;height:280px;object-fit:cover;object-position:center;display:block;border-radius:16px 16px 0 0;">
       <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(10,26,12,.7) 100%);border-radius:16px 16px 0 0;"></div>
     </div>
     <div class="sol-modal-body">
@@ -1904,7 +1901,7 @@ function openCookiePolicyFromBanner(e){
   <div class="sol-modal" id="solModalMinihotel">
     <button class="sol-modal-close" onclick="closeSolModal()" aria-label="Закрыть">✕</button>
     <div style="position:relative;overflow:hidden;border-radius:16px 16px 0 0;margin:-1px -1px 0 -1px;">
-      <img loading="lazy" src="/assets/images/minihotel-smart-room-modal.webp" alt="Автоматизированный номер современного мини-отеля" style="width:100%;height:280px;object-fit:cover;object-position:center;display:block;border-radius:16px 16px 0 0;">
+      <img loading="lazy" decoding="async" src="/assets/images/minihotel-smart-room-modal.jpg" alt="Автоматизированный номер современного мини-отеля" style="width:100%;height:280px;object-fit:cover;object-position:center;display:block;border-radius:16px 16px 0 0;">
       <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(10,26,12,.7) 100%);border-radius:16px 16px 0 0;"></div>
     </div>
     <div class="sol-modal-body">
@@ -1946,7 +1943,7 @@ function openCookiePolicyFromBanner(e){
   <div class="sol-modal" id="solModalCommercial">
     <button class="sol-modal-close" onclick="closeSolModal()" aria-label="Закрыть">✕</button>
     <div style="position:relative;overflow:hidden;border-radius:16px 16px 0 0;margin:-1px -1px 0 -1px;">
-      <img loading="lazy" src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=780&q=80" alt="Коммерческая недвижимость — умное управление" style="width:100%;height:280px;object-fit:cover;display:block;border-radius:16px 16px 0 0;" onerror="this.style.background='#112214';this.style.height='200px'">
+      <img loading="lazy" decoding="async" src="/assets/images/modal-commercial.jpg" alt="Коммерческая недвижимость — умное управление" style="width:100%;height:280px;object-fit:cover;display:block;border-radius:16px 16px 0 0;" onerror="this.style.background='#112214';this.style.height='200px'">
       <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(10,26,12,.7) 100%);border-radius:16px 16px 0 0;"></div>
     </div>
     <div class="sol-modal-body">
@@ -2008,7 +2005,7 @@ function openCookiePolicyFromBanner(e){
   <div class="sol-modal" id="solModalHotel">
     <button class="sol-modal-close" onclick="closeSolModal()" aria-label="Закрыть">✕</button>
     <div style="position:relative;overflow:hidden;border-radius:16px 16px 0 0;margin:-1px -1px 0 -1px;">
-      <img loading="lazy" src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=780&q=80" alt="Умный отель — Loxone" style="width:100%;height:280px;object-fit:cover;display:block;border-radius:16px 16px 0 0;" onerror="this.style.background='#112214';this.style.height='200px'">
+      <img loading="lazy" decoding="async" src="/assets/images/modal-hotel.jpg" alt="Умный отель — Loxone" style="width:100%;height:280px;object-fit:cover;display:block;border-radius:16px 16px 0 0;" onerror="this.style.background='#112214';this.style.height='200px'">
       <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(10,26,12,.7) 100%);border-radius:16px 16px 0 0;"></div>
     </div>
     <div class="sol-modal-body">
@@ -2070,7 +2067,7 @@ function openCookiePolicyFromBanner(e){
   <div class="sol-modal" id="solModalConstruction">
     <button class="sol-modal-close" onclick="closeSolModal()" aria-label="Закрыть">✕</button>
     <div style="position:relative;overflow:hidden;border-radius:16px 16px 0 0;margin:-1px -1px 0 -1px;">
-      <img loading="lazy" src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=780&q=80" alt="Умные новостройки — Loxone" style="width:100%;height:280px;object-fit:cover;display:block;border-radius:16px 16px 0 0;" onerror="this.style.background='#112214';this.style.height='200px'">
+      <img loading="lazy" decoding="async" src="/assets/images/modal-construction.jpg" alt="Умные новостройки — Loxone" style="width:100%;height:280px;object-fit:cover;display:block;border-radius:16px 16px 0 0;" onerror="this.style.background='#112214';this.style.height='200px'">
       <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(10,26,12,.7) 100%);border-radius:16px 16px 0 0;"></div>
     </div>
     <div class="sol-modal-body">
@@ -2325,7 +2322,7 @@ function openCookiePolicyFromBanner(e){
   <div class="sol-modal" id="solModalComfort">
     <button class="sol-modal-close" onclick="closeSolModal()" aria-label="Закрыть">✕</button>
     <div style="position:relative;overflow:hidden;border-radius:16px 16px 0 0;margin:-1px -1px 0 -1px;">
-      <img loading="lazy" src="https://images.unsplash.com/photo-1600210492493-0946911123ea?w=780&q=80" alt="Комфортное проживание — умный дом для семьи" style="width:100%;height:280px;object-fit:cover;display:block;border-radius:16px 16px 0 0;" onerror="this.style.background='#112214';this.style.height='200px'">
+      <img loading="lazy" decoding="async" src="/assets/images/modal-comfort.jpg" alt="Комфортное проживание — умный дом для семьи" style="width:100%;height:280px;object-fit:cover;display:block;border-radius:16px 16px 0 0;" onerror="this.style.background='#112214';this.style.height='200px'">
       <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(10,26,12,.7) 100%);border-radius:16px 16px 0 0;"></div>
     </div>
     <div class="sol-modal-body">
@@ -2387,7 +2384,7 @@ function openCookiePolicyFromBanner(e){
   <div class="sol-modal" id="solModalApp">
     <button class="sol-modal-close" onclick="closeSolModal()" aria-label="Закрыть">✕</button>
     <div style="position:relative;overflow:hidden;border-radius:16px 16px 0 0;margin:-1px -1px 0 -1px;">
-      <img loading="lazy" src="assets/images/app-control.webp" alt="Управление умным домом через приложение" style="width:100%;height:280px;object-fit:cover;object-position:center;display:block;border-radius:16px 16px 0 0;">
+      <img loading="lazy" decoding="async" src="assets/images/app-control.jpg" alt="Управление умным домом через приложение" style="width:100%;height:280px;object-fit:cover;object-position:center;display:block;border-radius:16px 16px 0 0;">
       <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(10,26,12,.7) 100%);border-radius:16px 16px 0 0;"></div>
     </div>
     <div class="sol-modal-body">
@@ -2459,7 +2456,7 @@ function openCookiePolicyFromBanner(e){
   <div class="sol-modal" id="solModalAutomation">
     <button class="sol-modal-close" onclick="closeSolModal()" aria-label="Закрыть">✕</button>
     <div style="position:relative;overflow:hidden;border-radius:16px 16px 0 0;margin:-1px -1px 0 -1px;">
-      <img loading="lazy" src="assets/images/automation-dashboard.webp" alt="Автоматизация повседневных процессов — умный дом" style="width:100%;height:280px;object-fit:cover;object-position:top;display:block;border-radius:16px 16px 0 0;">
+      <img loading="lazy" decoding="async" src="assets/images/automation-dashboard.jpg" alt="Автоматизация повседневных процессов — умный дом" style="width:100%;height:280px;object-fit:cover;object-position:top;display:block;border-radius:16px 16px 0 0;">
       <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(10,26,12,.7) 100%);border-radius:16px 16px 0 0;"></div>
     </div>
     <div class="sol-modal-body">
@@ -2540,7 +2537,7 @@ function openCookiePolicyFromBanner(e){
   <div class="sol-modal" id="solModalLighting">
     <button class="sol-modal-close" onclick="closeSolModal()" aria-label="Закрыть">✕</button>
     <div style="position:relative;overflow:hidden;border-radius:16px 16px 0 0;margin:-1px -1px 0 -1px;">
-      <img loading="lazy" src="assets/images/lighting-control.webp" alt="Управление освещением LOGIC SMART HOUSE" style="width:100%;height:280px;object-fit:contain;object-position:center;display:block;border-radius:16px 16px 0 0;background:#111111;">
+      <img loading="lazy" decoding="async" src="assets/images/lighting-control.jpg" alt="Управление освещением LOGIC SMART HOUSE" style="width:100%;height:280px;object-fit:contain;object-position:center;display:block;border-radius:16px 16px 0 0;background:#111111;">
     </div>
     <div class="sol-modal-body">
       <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px;">
@@ -2611,7 +2608,7 @@ function openCookiePolicyFromBanner(e){
   <div class="sol-modal" id="solModalScenes">
     <button class="sol-modal-close" onclick="closeSolModal()" aria-label="Закрыть">✕</button>
     <div style="position:relative;overflow:hidden;border-radius:16px 16px 0 0;margin:-1px -1px 0 -1px;">
-      <img loading="lazy" src="assets/images/lighting-scenes.webp" alt="Световые сцены LOGIC SMART HOUSE" style="width:100%;height:280px;object-fit:contain;object-position:center;display:block;border-radius:16px 16px 0 0;background:#111e13;">
+      <img loading="lazy" decoding="async" src="assets/images/lighting-scenes.jpg" alt="Световые сцены LOGIC SMART HOUSE" style="width:100%;height:280px;object-fit:contain;object-position:center;display:block;border-radius:16px 16px 0 0;background:#111e13;">
       <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(10,26,12,.7) 100%);border-radius:16px 16px 0 0;"></div>
     </div>
     <div class="sol-modal-body">
@@ -2683,7 +2680,7 @@ function openCookiePolicyFromBanner(e){
   <div class="sol-modal" id="solModalAudio">
     <button class="sol-modal-close" onclick="closeSolModal()" aria-label="Закрыть">✕</button>
     <div style="position:relative;overflow:hidden;border-radius:16px 16px 0 0;margin:-1px -1px 0 -1px;">
-      <img loading="lazy" src="assets/images/audio-speaker.webp" alt="Мультирум-аудио LOGIC SMART HOUSE" style="width:100%;height:280px;object-fit:cover;object-position:center;display:block;border-radius:16px 16px 0 0;">
+      <img loading="lazy" decoding="async" src="assets/images/audio-speaker.jpg" alt="Мультирум-аудио LOGIC SMART HOUSE" style="width:100%;height:280px;object-fit:cover;object-position:center;display:block;border-radius:16px 16px 0 0;">
       <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(10,26,12,.7) 100%);border-radius:16px 16px 0 0;"></div>
     </div>
     <div class="sol-modal-body">
@@ -2755,7 +2752,7 @@ function openCookiePolicyFromBanner(e){
   <div class="sol-modal" id="solModalShading">
     <button class="sol-modal-close" onclick="closeSolModal()" aria-label="Закрыть">✕</button>
     <div style="position:relative;overflow:hidden;border-radius:16px 16px 0 0;margin:-1px -1px 0 -1px;">
-      <img loading="lazy" src="assets/images/shading-blinds.webp" alt="Умные шторы и жалюзи LOGIC SMART HOUSE" style="width:100%;height:280px;object-fit:cover;object-position:center;display:block;border-radius:16px 16px 0 0;">
+      <img loading="lazy" decoding="async" src="assets/images/shading-blinds.jpg" alt="Умные шторы и жалюзи LOGIC SMART HOUSE" style="width:100%;height:280px;object-fit:cover;object-position:center;display:block;border-radius:16px 16px 0 0;">
       <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(10,26,12,.7) 100%);border-radius:16px 16px 0 0;"></div>
     </div>
     <div class="sol-modal-body">
