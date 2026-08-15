@@ -314,9 +314,11 @@ nav.scrolled{height:58px;}
 /* PROCESS */
 .process{background:var(--bg);border-top:1px solid var(--border);}
 .process-steps{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--border);margin-top:52px;}
-.process-step{padding:40px 32px;border-right:1px solid var(--border);position:relative;}
+.process-step{padding:40px 32px;border-right:1px solid var(--border);position:relative;overflow:hidden;background:var(--bg2);}
+.process-step::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,26,12,.22),rgba(10,26,12,.68)),var(--step-image) center/cover no-repeat;filter:brightness(.5) saturate(.95);transform:scale(1.02);}
+.process-step > *{position:relative;z-index:1;}
 .process-step:last-child{border-right:none;}
-.step-num{font-size:56px;font-weight:900;color:rgba(245,166,35,.06);line-height:1;margin-bottom:16px;}
+.step-num{font-size:56px;font-weight:900;color:rgba(245,166,35,.26);line-height:1;margin-bottom:16px;text-shadow:0 0 10px rgba(245,166,35,.12);}
 .step-title{font-size:15px;font-weight:800;color:var(--text);margin-bottom:10px;}
 .step-desc{font-size:12px;color:var(--text-dim);line-height:1.7;}
 .step-connector{position:absolute;top:40px;right:-12px;width:24px;height:24px;background:var(--bg);border:1px solid var(--border2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--green);z-index:2;}
@@ -899,10 +901,10 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 52px
     <h2 class="section-title" style="text-align:center;">От идеи до<br>интеллектуальной экосистемы</h2>
   </div>
   <div class="process-steps reveal">
-    <div class="process-step"><div class="step-num">01</div><div class="step-title">Консультация</div><p class="step-desc">Обсуждаем ваши потребности, объект и бюджет. Предлагаем оптимальную конфигурацию системы.</p><div class="step-connector">→</div></div>
-    <div class="process-step"><div class="step-num">02</div><div class="step-title">Проектирование</div><p class="step-desc">Разрабатываем детальный проект автоматизации. Подбираем оборудование и планируем монтаж.</p><div class="step-connector">→</div></div>
-    <div class="process-step"><div class="step-num">03</div><div class="step-title">Монтаж</div><p class="step-desc">Сертифицированные партнёры устанавливают и настраивают систему в строгом соответствии с проектом.</p><div class="step-connector">→</div></div>
-    <div class="process-step"><div class="step-num">04</div><div class="step-title">Поддержка</div><p class="step-desc">Обучение работе с системой, техническая поддержка 24/7 и удалённый мониторинг.</p></div>
+    <div class="process-step" style="--step-image:url('/assets/images/process-consultation.png')"><div class="step-num">01</div><div class="step-title">Консультация</div><p class="step-desc">Обсуждаем ваши потребности, объект и бюджет. Предлагаем оптимальную конфигурацию системы.</p><div class="step-connector">→</div></div>
+    <div class="process-step" style="--step-image:url('/assets/images/process-design.png')"><div class="step-num">02</div><div class="step-title">Проектирование</div><p class="step-desc">Разрабатываем детальный проект автоматизации. Подбираем оборудование и планируем монтаж.</p><div class="step-connector">→</div></div>
+    <div class="process-step" style="--step-image:url('/assets/images/process-installation.png')"><div class="step-num">03</div><div class="step-title">Монтаж</div><p class="step-desc">Сертифицированные партнёры устанавливают и настраивают систему в строгом соответствии с проектом.</p><div class="step-connector">→</div></div>
+    <div class="process-step" style="--step-image:url('/assets/images/process-support.png')"><div class="step-num">04</div><div class="step-title">Поддержка</div><p class="step-desc">Обучение работе с системой, техническая поддержка 24/7 и удалённый мониторинг.</p></div>
   </div>
 </section>
 
